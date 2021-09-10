@@ -1,24 +1,25 @@
-$font-size1: calc(3rem + 1vw);
-$font-size2: calc(2.5rem + 1vw);
-$font-size3: calc(2rem + 1vw);
-$font-size4: calc(1.5rem + 1vw);
-$font-size5: calc(1rem + 1vw);
-$font-size6: calc(0.75rem + 1vw);
-$font-size7: calc(0.6rem + 1vw);
-$font-size8: calc(0.5rem + 1vw);
-$font-size9: calc(0.4rem + 1vw);
-$font-size10: calc(0.3rem + 1vw);
-$font-size11: calc(0.2rem + 1vw);
-$font-size12: calc(0.1rem + 1vw);
-$font-size13: calc(0.1rem + 0.7vw);
-$font-size14: calc(0.1rem + 0.5vw);
+// $font-size1: calc(3rem + 1vw);
+// $font-size2: calc(2.5rem + 1vw);
+// $font-size3: calc(2rem + 1vw);
+// $font-size4: calc(1.5rem + 1vw);
+// $font-size5: calc(1rem + 1vw);
+// $font-size6: calc(0.75rem + 1vw);
+// $font-size7: calc(0.6rem + 1vw);
+// $font-size8: calc(0.5rem + 1vw);
+// $font-size9: calc(0.4rem + 1vw);
+// $font-size10: calc(0.3rem + 1vw);
+// $font-size11: calc(0.2rem + 1vw);
+// $font-size12: calc(0.1rem + 1vw);
+// $font-size13: calc(0.1rem + 0.7vw);
+// $font-size14: calc(0.1rem + 0.5vw);
+
 $color1: rgb(0, 0, 0);
 $color2: rgba(0, 0, 0, 0.438);
 $color3: rgb(0, 245, 245);
 $color4: rgb(0, 196, 196);
 $color5: rgb(0, 139, 139);
 $color6: rgb(0, 41, 41);
-$color7: #fff;
+$color7: rgb(212, 212, 212);
 @font-face {
     font-family: 'Kalame';
     src: url('../fonts/vazir/') format('truetype');
@@ -34,7 +35,7 @@ $color7: #fff;
 }
 @font-face {
     font-family: 'vazir';
-    src: url('../fonts/vazir/Vazir-Black-FD.ttf') format('truetype');
+    src: url('../fonts/vazir/Vazir-Black-FD.ttf') format('truetype'), url('../fonts/vazir/Vazir-Regular-FD.ttf');
 }
 * {
     margin: 0;
@@ -55,7 +56,7 @@ body {
         transition: all 0.2s ease-in-out;
         text-decoration: none;
         color: $color7;
-        font-size: $font-size8;
+        font-size: 1.6rem;
         text-shadow: 2px 2px 2px #000;
         z-index: 3;
         font-weight: bold;
@@ -80,12 +81,13 @@ body {
     label,
     input,
     p {
-        font-size: $font-size6;
+        font-size: 1rem;
         z-index: 3;
-        text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 1px 2px rgb(0, 0, 0);
+        font-weight: normal;
     }
     button {
-        font-size: $font-size6;
+        font-size: 1rem;
         font-weight: bold;
         z-index: 3;
         padding: 1rem;
@@ -140,13 +142,13 @@ header.main-head {
     z-index: 100;
     nav {
         width: 100vw;
-        background: $color6;
+        background: rgba(0, 41, 41, 0.603);
         display: flex;
         align-items: center;
         min-height: 10vh;
         padding: 1rem 0rem;
         flex-wrap: wrap;
-        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.884);
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.952);
         .container {
             display: flex;
             flex-direction: row-reverse;
@@ -164,15 +166,16 @@ header.main-head {
                     align-items: center;
                     h1 {
                         color: $color3;
-                        font-size: $font-size12;
+                        font-size: 1.5rem;
                         padding: 0.5rem 1rem;
                     }
                     h3 {
                         color: $color3;
-                        font-size: $font-size8;
+                        font-size: 1.5rem;
                         padding: 0.5rem 1rem;
                         letter-spacing: 2px;
                         font-family: 'GreatVibes-Regular';
+                        letter-spacing: 5px;
                     }
                 }
             }
@@ -212,13 +215,20 @@ section#Home {
             align-items: center;
             text-align: center;
             h2 {
-                font-size: $font-size2;
+                font-size: 3rem;
                 color: $color3;
                 padding: 10rem 2rem 10rem 2rem;
             }
             p {
+                font-size: 2rem;
                 color: $color7;
-                font-size: $font-size4;
+                cursor: pointer;
+                padding: 5rem 4rem;
+                line-height: 32px;
+                text-align: justify;
+                &:hover {
+                    color: $color3;
+                }
             }
         }
     }
@@ -243,12 +253,12 @@ section#Introduction {
             flex-direction: column;
             h2 {
                 color: $color3;
-                font-size: $font-size4;
+                font-size: 3rem;
                 padding-top: 2rem;
             }
             h3 {
-                color: $color7;
-                font-size: $font-size7;
+                color: #fff;
+                font-size: 2rem;
                 border: 3px solid $color4;
                 padding: 0.5rem 2rem;
                 margin-bottom: 4rem;
@@ -260,17 +270,18 @@ section#Introduction {
                 }
             }
             p {
-                color: $color7;
-                padding: 5rem 10rem;
-                font-size: $font-size4;
+                color: #fff;
+                padding: 5rem 4rem;
+                line-height: 32px;
+                font-size: 2rem;
+                text-align: justify;
             }
         }
         .picture {
             flex: 2 1 40rem;
             .hero {
                 max-width: 100%;
-                // height: auto;
-                height: 100vh;
+                height: auto;
                 object-fit: cover;
                 opacity: 0.9;
             }
@@ -283,77 +294,258 @@ section#About {
     display: flex;
     flex-wrap: wrap;
     background: $color6;
-    .container {
-        min-height: 100vh;
-        display: flex;
-        flex-wrap: wrap;
-        .about-image {
-            flex: 2 1 40rem;
-            justify-content: space-evenly;
-            position: relative;
-            h5 {
-                font-size: $font-size8;
-                color: $color7;
-                text-align: center;
+    .about-image {
+        flex: 1 1 40rem;
+        justify-content: space-evenly;
+        position: relative;
+        h5 {
+            font-size: 2.75rem;
+            position: absolute;
+            bottom: 80%;
+            left: 50%;
+            color: $color3;
+            transform: translate(-50%, -20%);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+    }
+    .about-text {
+        flex: 2 1 40rem;
+        flex-direction: column;
+        direction: rtl;
+        justify-content: space-evenly;
+        text-align: justify;
+        padding: 3rem 1rem;
+        h2 {
+            font-size: 2.75rem;
+            color: $color3;
+            text-align: center;
+            padding: 3rem 3rem;
+        }
+        .about-life {
+            flex-wrap: wrap;
+            h3 {
+                font-size: 2rem;
+                color: $color3;
                 padding: 1rem 3rem;
-                position: absolute;
-                bottom: 86%;
-                left: 48%;
             }
-            img {
-                width: 90%;
-                height: 100vh;
+            p {
+                font-size: 1.5rem;
+                color: $color7;
+                padding: 1rem 3rem;
+                transition: all 0.5s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    color: $color3;
+                }
             }
         }
-        .about-text {
-            flex: 1 1 40rem;
-            flex-direction: column;
-            text-align: left;
-            direction: ltr;
-            justify-content: space-evenly;
-            h2 {
-                font-size: $font-size8;
+        .about-work {
+            flex-wrap: wrap;
+            h3 {
+                font-size: 2rem;
+                color: $color3;
+                padding: 1rem 3rem;
+            }
+            p {
+                font-size: 1.5rem;
                 color: $color7;
-                text-align: center;
-                padding: 3rem 3rem;
-            }
-            .about-life {
-                flex-wrap: wrap;
-                h3 {
-                    font-size: $font-size10;
-                    color: $color7;
-                    padding: 1rem 3rem;
-                }
-                p {
-                    font-size: $font-size10;
-                    color: $color7;
-                    padding: 1rem 3rem;
+                padding: 1rem 3rem;
+                transition: all 0.5s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    color: $color3;
                 }
             }
-            .about-work {
-                flex-wrap: wrap;
-                h3 {
-                    font-size: $font-size10;
-                    color: $color7;
-                    padding: 1rem 3rem;
-                }
-                p {
-                    font-size: $font-size10;
-                    color: $color7;
-                    padding: 1rem 3rem;
+        }
+        .about-contact {
+            flex-wrap: wrap;
+            h3 {
+                font-size: 2rem;
+                color: $color3;
+                padding: 1rem 3rem;
+            }
+            p {
+                font-size: 1.5rem;
+                color: $color7;
+                padding: 1rem 3rem;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    color: $color3;
                 }
             }
-            .about-contact {
-                flex-wrap: wrap;
-                h3 {
-                    font-size: $font-size10;
-                    color: $color7;
-                    padding: 1rem 3rem;
-                }
-                p {
-                    font-size: $font-size10;
-                    color: $color7;
-                    padding: 1rem 3rem;
+        }
+    }
+}
+///////////////////////////////Gallery Section///////////////////////////////
+section#Gallery {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery1 {
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+    .gallery2 {
+        grid-column: 3/3;
+        grid-row: 1/2;
+    }
+    .gallery3 {
+        grid-column: 2/2;
+        grid-row: 1/1;
+    }
+    .gallery4 {
+        grid-column: 3/1;
+        grid-row: 2/2;
+    }
+    .gallery5 {
+        grid-column: 3/3;
+    }
+    .gallery-head {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background: rgba(0, 41, 41, 0.603);
+        padding: 10rem 13rem;
+        box-shadow: -1px 0px 10px 7px #000;
+        h2 {
+            color: $color7;
+            font-size: 3rem;
+        }
+        p {
+            color: $color7;
+            font-size: 2rem;
+        }
+    }
+}
+///////////////////////////////Contact Section///////////////////////////////
+section#Contact {
+    background: rgb(44, 44, 44);
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+    .form-wrapper {
+        width: 50%;
+        background: linear-gradient(rgba(0, 0, 0, 0.568), transparent), url('../images/anthony.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        padding: 5rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        flex-wrap: wrap;
+        flex: 3 1 40rem;
+        h2 {
+            font-size: 2rem;
+            color: $color7;
+            padding: 2rem 1rem;
+            span {
+                font-size: 3rem;
+                color: $color3;
+                padding: 1.5rem 1rem;
+            }
+        }
+        form {
+            margin: 3rem 0rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0.7;
+            transition: all 1s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+            input,
+            button,
+            label {
+                font-size: 2rem;
+                padding: 1.5rem 1rem;
+                margin: 1rem 1rem;
+                width: 30rem;
+            }
+            input {
+                color: #000;
+                text-shadow: none;
+                display: block;
+                border: 3px solid $color5;
+            }
+            button {
+                color: $color6;
+                font-family: 'vazir';
+                border: 3px solid $color5;
+            }
+            label {
+                color: $color7;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+    .image {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 2;
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+            flex: 1 1 40rem;
+            opacity: 0.7;
+        }
+        .gallery1 {
+            grid-template-columns: 1;
+            grid-template-rows: 1;
+        }
+        .gallery2 {
+            grid-template-columns: 1;
+            grid-template-rows: 2;
+        }
+        .gallery3 {
+            grid-template-columns: 1;
+            grid-template-rows: 3;
+        }
+    }
+}
+///////////////////////////////////Footer///////////////////////////////////
+footer {
+    background: $color1;
+    color: $color7;
+    display: flex;
+    padding: 3rem 5%;
+    align-items: center;
+    flex-wrap: wrap;
+    h4 {
+        font-size: 2rem;
+        flex: 3 1 40rem;
+    }
+
+    ul {
+        display: flex;
+        flex: 1 1 40rem;
+        justify-content: space-evenly;
+        li {
+            a {
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
                 }
             }
         }
