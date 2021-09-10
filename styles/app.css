@@ -29,7 +29,6 @@ html,
 body {
   font-family: 'Vazir', sans-serif;
   font-size: 62.5%;
-  line-height: 2;
   direction: rtl;
   text-align: right;
   /* حذف اسکرول افقی */
@@ -148,7 +147,7 @@ header.main-head {
 
 header.main-head nav {
   width: 100vw;
-  background: rgba(0, 0, 0, 0.438);
+  background: #002929;
   display: flex;
   align-items: center;
   min-height: 10vh;
@@ -292,8 +291,105 @@ section#Introduction .container .picture {
 
 section#Introduction .container .picture .hero {
   max-width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
   opacity: 0.9;
+}
+
+section#About {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: #002929;
+}
+
+section#About .container {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#About .container .about-image {
+  flex: 2 1 40rem;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+section#About .container .about-image h5 {
+  font-size: calc(0.5rem + 1vw);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 3rem;
+  position: absolute;
+  bottom: 86%;
+  left: 48%;
+}
+
+section#About .container .about-image img {
+  width: 90%;
+  height: 100vh;
+}
+
+section#About .container .about-text {
+  flex: 1 1 40rem;
+  flex-direction: column;
+  text-align: left;
+  direction: ltr;
+  justify-content: space-evenly;
+}
+
+section#About .container .about-text h2 {
+  font-size: calc(0.5rem + 1vw);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 3rem;
+}
+
+section#About .container .about-text .about-life {
+  flex-wrap: wrap;
+}
+
+section#About .container .about-text .about-life h3 {
+  font-size: calc(0.3rem + 1vw);
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+section#About .container .about-text .about-life p {
+  font-size: calc(0.3rem + 1vw);
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+section#About .container .about-text .about-work {
+  flex-wrap: wrap;
+}
+
+section#About .container .about-text .about-work h3 {
+  font-size: calc(0.3rem + 1vw);
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+section#About .container .about-text .about-work p {
+  font-size: calc(0.3rem + 1vw);
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+section#About .container .about-text .about-contact {
+  flex-wrap: wrap;
+}
+
+section#About .container .about-text .about-contact h3 {
+  font-size: calc(0.3rem + 1vw);
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+section#About .container .about-text .about-contact p {
+  font-size: calc(0.3rem + 1vw);
+  color: #fff;
+  padding: 1rem 3rem;
 }
 /*# sourceMappingURL=app.css.map */

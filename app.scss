@@ -46,7 +46,6 @@ body {
     font-family: 'Vazir', sans-serif;
     font-size: 62.5%;
     // --header1: 3rem;
-    line-height: 2;
     direction: rtl;
     text-align: right;
     /* حذف اسکرول افقی */
@@ -141,7 +140,7 @@ header.main-head {
     z-index: 100;
     nav {
         width: 100vw;
-        background: $color2;
+        background: $color6;
         display: flex;
         align-items: center;
         min-height: 10vh;
@@ -224,7 +223,7 @@ section#Home {
         }
     }
 }
-///////////////////////////////Introduction Section/////////////////////////////////
+///////////////////////////////Introduction Section/////////////////////////
 section#Introduction {
     background: #c9cdce;
     height: auto;
@@ -270,13 +269,93 @@ section#Introduction {
             flex: 2 1 40rem;
             .hero {
                 max-width: 100%;
-                height: auto;
+                // height: auto;
+                height: 100vh;
                 object-fit: cover;
                 opacity: 0.9;
             }
         }
     }
 }
-///////////////////////////////Portfolio Section/////////////////////////////////
-section#Portfolio {
+///////////////////////////////About Section/////////////////////////////////
+section#About {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: $color6;
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        .about-image {
+            flex: 2 1 40rem;
+            justify-content: space-evenly;
+            position: relative;
+            h5 {
+                font-size: $font-size8;
+                color: $color7;
+                text-align: center;
+                padding: 1rem 3rem;
+                position: absolute;
+                bottom: 86%;
+                left: 48%;
+            }
+            img {
+                width: 90%;
+                height: 100vh;
+            }
+        }
+        .about-text {
+            flex: 1 1 40rem;
+            flex-direction: column;
+            text-align: left;
+            direction: ltr;
+            justify-content: space-evenly;
+            h2 {
+                font-size: $font-size8;
+                color: $color7;
+                text-align: center;
+                padding: 3rem 3rem;
+            }
+            .about-life {
+                flex-wrap: wrap;
+                h3 {
+                    font-size: $font-size10;
+                    color: $color7;
+                    padding: 1rem 3rem;
+                }
+                p {
+                    font-size: $font-size10;
+                    color: $color7;
+                    padding: 1rem 3rem;
+                }
+            }
+            .about-work {
+                flex-wrap: wrap;
+                h3 {
+                    font-size: $font-size10;
+                    color: $color7;
+                    padding: 1rem 3rem;
+                }
+                p {
+                    font-size: $font-size10;
+                    color: $color7;
+                    padding: 1rem 3rem;
+                }
+            }
+            .about-contact {
+                flex-wrap: wrap;
+                h3 {
+                    font-size: $font-size10;
+                    color: $color7;
+                    padding: 1rem 3rem;
+                }
+                p {
+                    font-size: $font-size10;
+                    color: $color7;
+                    padding: 1rem 3rem;
+                }
+            }
+        }
+    }
 }
