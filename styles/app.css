@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Kalame';
+  src: url("../fonts/vazir/") format("truetype");
+}
+
+@font-face {
+  font-family: 'Bettina';
+  src: url("../fonts/bettina/BettinaScript/Bettina.ttf") format("truetype"), url("../fonts/bettina/BettinaScript/Bettina.woff");
+}
+
+@font-face {
+  font-family: 'GreatVibes-Regular';
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'vazir';
+  src: url("../fonts/vazir/Vazir-Black-FD.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Vazir', sans-serif;
+  font-size: 62.5%;
+  line-height: 2;
+  direction: rtl;
+  text-align: right;
+  /* حذف اسکرول افقی */
+  overflow-x: hidden;
+  /* Utility Classes */
+}
+
+html a,
+body a {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+  font-size: calc(0.5rem + 1vw);
+  text-shadow: 2px 2px 2px #000;
+  z-index: 3;
+  font-weight: bold;
+}
+
+html .container,
+body .container {
+  width: 90vw;
+  margin: auto;
+}
+
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  z-index: 10;
+  text-shadow: 2px 2px 2px #000;
+  padding: 1rem 1rem;
+}
+
+html li,
+html label,
+html input,
+html p,
+body li,
+body label,
+body input,
+body p {
+  font-size: calc(0.75rem + 1vw);
+  z-index: 3;
+  text-shadow: 2px 2px 2px #000;
+}
+
+html button,
+body button {
+  font-size: calc(0.75rem + 1vw);
+  font-weight: bold;
+  z-index: 3;
+  padding: 1rem;
+  border: none;
+  background: #00f5f5;
+  color: #fff;
+  padding: 1rem 1rem;
+  flex: 1 1 auto;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  animation: buttonAnimation 1.5s infinite alternate 1.5s;
+  animation-iteration-count: 3;
+}
+
+html button:hover,
+body button:hover {
+  background: #00c4c4;
+}
+
+html button:focus,
+body button:focus {
+  background: darkcyan;
+  outline-style: solid;
+  outline-color: #002929;
+}
+
+html ul,
+body ul {
+  list-style: none;
+}
+
+html li,
+body li {
+  list-style: none;
+  z-index: 3;
+  text-shadow: 2px 2px 2px #000;
+  padding: 0.5rem 1rem;
+}
+
+html span,
+body span {
+  color: #00f5f5;
+  padding: 1rem 0.5rem;
+}
+
+html .flex,
+body .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header.main-head {
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+header.main-head nav {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.438);
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  padding: 1rem 0rem;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.884);
+}
+
+header.main-head nav .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header.main-head nav .container #logo {
+  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header.main-head nav .container #logo .a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header.main-head nav .container #logo .a h1 {
+  color: #00f5f5;
+  font-size: calc(0.1rem + 1vw);
+  padding: 0.5rem 1rem;
+}
+
+header.main-head nav .container #logo .a h3 {
+  color: #00f5f5;
+  font-size: calc(0.5rem + 1vw);
+  padding: 0.5rem 1rem;
+  letter-spacing: 2px;
+  font-family: 'GreatVibes-Regular';
+}
+
+header.main-head nav .container .nav-link {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 20rem;
+}
+
+header.main-head nav .container .nav-link li a:hover {
+  color: #00f5f5;
+}
+
+header.main-head nav input {
+  opacity: 0;
+}
+
+section#Home {
+  background: linear-gradient(rgba(0, 0, 0, 0.808), transparent), url("../images/22.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 auto;
+}
+
+section#Home .container .H {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section#Home .container .H h2 {
+  font-size: calc(2.5rem + 1vw);
+  color: #00f5f5;
+  padding: 10rem 2rem 10rem 2rem;
+}
+
+section#Home .container .H p {
+  color: #fff;
+  font-size: calc(1.5rem + 1vw);
+}
+
+section#Introduction {
+  background: #c9cdce;
+  height: auto;
+  overflow: hidden;
+}
+
+section#Introduction .container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+section#Introduction .container .intro {
+  flex: 2 1 40rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section#Introduction .container .intro h2 {
+  color: #00f5f5;
+  font-size: calc(1.5rem + 1vw);
+  padding-top: 2rem;
+}
+
+section#Introduction .container .intro h3 {
+  color: #fff;
+  font-size: calc(0.6rem + 1vw);
+  border: 3px solid #00c4c4;
+  padding: 0.5rem 2rem;
+  margin-bottom: 4rem;
+  transition: all 0.5s ease-in-out;
+}
+
+section#Introduction .container .intro h3:hover {
+  background: #00f5f5;
+  cursor: pointer;
+}
+
+section#Introduction .container .intro p {
+  color: #fff;
+  padding: 5rem 10rem;
+  font-size: calc(1.5rem + 1vw);
+}
+
+section#Introduction .container .picture {
+  flex: 2 1 40rem;
+}
+
+section#Introduction .container .picture .hero {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=app.css.map */

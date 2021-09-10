@@ -1,0 +1,282 @@
+$font-size1: calc(3rem + 1vw);
+$font-size2: calc(2.5rem + 1vw);
+$font-size3: calc(2rem + 1vw);
+$font-size4: calc(1.5rem + 1vw);
+$font-size5: calc(1rem + 1vw);
+$font-size6: calc(0.75rem + 1vw);
+$font-size7: calc(0.6rem + 1vw);
+$font-size8: calc(0.5rem + 1vw);
+$font-size9: calc(0.4rem + 1vw);
+$font-size10: calc(0.3rem + 1vw);
+$font-size11: calc(0.2rem + 1vw);
+$font-size12: calc(0.1rem + 1vw);
+$font-size13: calc(0.1rem + 0.7vw);
+$font-size14: calc(0.1rem + 0.5vw);
+$color1: rgb(0, 0, 0);
+$color2: rgba(0, 0, 0, 0.438);
+$color3: rgb(0, 245, 245);
+$color4: rgb(0, 196, 196);
+$color5: rgb(0, 139, 139);
+$color6: rgb(0, 41, 41);
+$color7: #fff;
+@font-face {
+    font-family: 'Kalame';
+    src: url('../fonts/vazir/') format('truetype');
+}
+@font-face {
+    font-family: 'Bettina';
+    src: url('../fonts/bettina/BettinaScript/Bettina.ttf') format('truetype'),
+        url('../fonts/bettina/BettinaScript/Bettina.woff');
+}
+@font-face {
+    font-family: 'GreatVibes-Regular';
+    src: url('../fonts/GreatVibes-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir/Vazir-Black-FD.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Vazir', sans-serif;
+    font-size: 62.5%;
+    // --header1: 3rem;
+    line-height: 2;
+    direction: rtl;
+    text-align: right;
+    /* حذف اسکرول افقی */
+    overflow-x: hidden;
+    /* Utility Classes */
+    a {
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+        color: $color7;
+        font-size: $font-size8;
+        text-shadow: 2px 2px 2px #000;
+        z-index: 3;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90vw;
+        margin: auto;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        // font-size: var(--header1);
+        z-index: 10;
+        text-shadow: 2px 2px 2px #000;
+        padding: 1rem 1rem;
+    }
+    li,
+    label,
+    input,
+    p {
+        font-size: $font-size6;
+        z-index: 3;
+        text-shadow: 2px 2px 2px #000;
+    }
+    button {
+        font-size: $font-size6;
+        font-weight: bold;
+        z-index: 3;
+        padding: 1rem;
+        border: none;
+        // border-radius: 50px;
+        background: $color3;
+        color: #fff;
+        padding: 1rem 1rem;
+        flex: 1 1 auto;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        animation: buttonAnimation 1.5s infinite alternate 1.5s;
+        animation-iteration-count: 3;
+        &:hover {
+            background: $color4;
+        }
+        &:focus {
+            background: $color5;
+            outline-style: solid;
+            outline-color: $color6;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+    li {
+        list-style: none;
+        z-index: 3;
+        text-shadow: 2px 2px 2px #000;
+        padding: 0.5rem 1rem;
+    }
+    span {
+        color: $color3;
+        padding: 1rem 0.5rem;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    // .burger,
+    // .menu-check {
+    //     display: none;
+    // }
+}
+////////////////////////////////header/////////////////////////////////////
+header.main-head {
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    nav {
+        width: 100vw;
+        background: $color2;
+        display: flex;
+        align-items: center;
+        min-height: 10vh;
+        padding: 1rem 0rem;
+        flex-wrap: wrap;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.884);
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            #logo {
+                flex: 1 1 20rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                .a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h1 {
+                        color: $color3;
+                        font-size: $font-size12;
+                        padding: 0.5rem 1rem;
+                    }
+                    h3 {
+                        color: $color3;
+                        font-size: $font-size8;
+                        padding: 0.5rem 1rem;
+                        letter-spacing: 2px;
+                        font-family: 'GreatVibes-Regular';
+                    }
+                }
+            }
+            .nav-link {
+                display: flex;
+                justify-content: space-between;
+                flex: 1 1 20rem;
+                li a {
+                    &:hover {
+                        color: $color3;
+                    }
+                }
+            }
+        }
+        input {
+            opacity: 0;
+        }
+    }
+}
+///////////////////////////////Home Section/////////////////////////////////
+section#Home {
+    background: linear-gradient(rgba(0, 0, 0, 0.808), transparent), url('../images/22.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 auto;
+    .container {
+        .H {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h2 {
+                font-size: $font-size2;
+                color: $color3;
+                padding: 10rem 2rem 10rem 2rem;
+            }
+            p {
+                color: $color7;
+                font-size: $font-size4;
+            }
+        }
+    }
+}
+///////////////////////////////Introduction Section/////////////////////////////////
+section#Introduction {
+    background: #c9cdce;
+    height: auto;
+    overflow: hidden;
+    .container {
+        // height: auto;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        .intro {
+            flex: 2 1 40rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h2 {
+                color: $color3;
+                font-size: $font-size4;
+                padding-top: 2rem;
+            }
+            h3 {
+                color: $color7;
+                font-size: $font-size7;
+                border: 3px solid $color4;
+                padding: 0.5rem 2rem;
+                margin-bottom: 4rem;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    background: $color3;
+                    cursor: pointer;
+                }
+            }
+            p {
+                color: $color7;
+                padding: 5rem 10rem;
+                font-size: $font-size4;
+            }
+        }
+        .picture {
+            flex: 2 1 40rem;
+            .hero {
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+///////////////////////////////Portfolio Section/////////////////////////////////
+section#Portfolio {
+}
