@@ -1,4 +1,4 @@
-const nav = document.querySelector(".nav-links");
+const nav = document.querySelector(".nav-link");
 const burger = document.querySelector(".burger");
 const links = nav.querySelectorAll("a");
 
