@@ -46,6 +46,7 @@ html,
 body {
     font-family: 'Vazir', sans-serif;
     font-size: 62.5%;
+    line-height: 45px;
     // --header1: 3rem;
     direction: rtl;
     text-align: right;
@@ -56,7 +57,7 @@ body {
         transition: all 0.2s ease-in-out;
         text-decoration: none;
         color: $color7;
-        font-size: 1.6rem;
+        font-size: 266%;
         text-shadow: 2px 2px 2px #000;
         z-index: 3;
         font-weight: bold;
@@ -81,21 +82,17 @@ body {
     label,
     input,
     p {
-        font-size: 1rem;
         z-index: 3;
         text-shadow: 2px 1px 2px rgb(0, 0, 0);
         font-weight: normal;
     }
     button {
-        font-size: 1rem;
         font-weight: bold;
         z-index: 3;
-        padding: 1rem;
         border: none;
         // border-radius: 50px;
         background: $color3;
         color: #fff;
-        padding: 1rem 1rem;
         flex: 1 1 auto;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
@@ -166,16 +163,8 @@ header.main-head {
                     align-items: center;
                     h1 {
                         color: $color3;
-                        font-size: 1.5rem;
+                        font-size: 265%;
                         padding: 0.5rem 1rem;
-                    }
-                    h3 {
-                        color: $color3;
-                        font-size: 1.5rem;
-                        padding: 0.5rem 1rem;
-                        letter-spacing: 2px;
-                        font-family: 'GreatVibes-Regular';
-                        letter-spacing: 5px;
                     }
                 }
             }
@@ -215,17 +204,19 @@ section#Home {
             align-items: center;
             text-align: center;
             h2 {
-                font-size: 3rem;
+                font-size: 360%;
                 color: $color3;
-                padding: 10rem 2rem 10rem 2rem;
+                padding: 15rem 2rem 10rem 2rem;
+                margin: 2rem 0rem;
             }
             p {
-                font-size: 2rem;
+                font-size: 370%;
+                margin: 0.5rem 0.5rem;
                 color: $color7;
                 cursor: pointer;
-                padding: 5rem 4rem;
-                line-height: 32px;
-                text-align: justify;
+                padding: 2rem 2rem;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
                 &:hover {
                     color: $color3;
                 }
@@ -253,12 +244,12 @@ section#Introduction {
             flex-direction: column;
             h2 {
                 color: $color3;
-                font-size: 3rem;
+                font-size: 350%;
                 padding-top: 2rem;
             }
             h3 {
                 color: #fff;
-                font-size: 2rem;
+                font-size: 260%;
                 border: 3px solid $color4;
                 padding: 0.5rem 2rem;
                 margin-bottom: 4rem;
@@ -270,18 +261,18 @@ section#Introduction {
                 }
             }
             p {
-                color: #fff;
-                padding: 5rem 4rem;
-                line-height: 32px;
-                font-size: 2rem;
+                color: #000;
+                text-shadow: none;
+                padding: 5rem 7rem;
+                font-size: 340%;
                 text-align: justify;
             }
         }
         .picture {
             flex: 2 1 40rem;
             .hero {
-                max-width: 100%;
-                height: auto;
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
                 opacity: 0.9;
             }
@@ -299,7 +290,7 @@ section#About {
         justify-content: space-evenly;
         position: relative;
         h5 {
-            font-size: 2.75rem;
+            font-size: 350%;
             position: absolute;
             bottom: 80%;
             left: 50%;
@@ -321,7 +312,7 @@ section#About {
         text-align: justify;
         padding: 3rem 1rem;
         h2 {
-            font-size: 2.75rem;
+            font-size: 350%;
             color: $color3;
             text-align: center;
             padding: 3rem 3rem;
@@ -329,12 +320,12 @@ section#About {
         .about-life {
             flex-wrap: wrap;
             h3 {
-                font-size: 2rem;
+                font-size: 300%;
                 color: $color3;
                 padding: 1rem 3rem;
             }
             p {
-                font-size: 1.5rem;
+                font-size: 300%;
                 color: $color7;
                 padding: 1rem 3rem;
                 transition: all 0.5s ease-in-out;
@@ -347,12 +338,12 @@ section#About {
         .about-work {
             flex-wrap: wrap;
             h3 {
-                font-size: 2rem;
+                font-size: 300%;
                 color: $color3;
                 padding: 1rem 3rem;
             }
             p {
-                font-size: 1.5rem;
+                font-size: 300%;
                 color: $color7;
                 padding: 1rem 3rem;
                 transition: all 0.5s ease-in-out;
@@ -365,12 +356,12 @@ section#About {
         .about-contact {
             flex-wrap: wrap;
             h3 {
-                font-size: 2rem;
+                font-size: 300%;
                 color: $color3;
                 padding: 1rem 3rem;
             }
             p {
-                font-size: 1.5rem;
+                font-size: 300%;
                 color: $color7;
                 padding: 1rem 3rem;
                 cursor: pointer;
@@ -421,13 +412,18 @@ section#Gallery {
         background: rgba(0, 41, 41, 0.603);
         padding: 10rem 13rem;
         box-shadow: -1px 0px 10px 7px #000;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
         h2 {
             color: $color7;
-            font-size: 3rem;
+            font-size: 450%;
         }
         p {
             color: $color7;
-            font-size: 2rem;
+            font-size: 312%;
+        }
+        &:hover {
+            background: rgb(0, 41, 41);
         }
     }
 }
@@ -441,6 +437,7 @@ section#Contact {
     cursor: pointer;
     .form-wrapper {
         width: 50%;
+        height: auto;
         background: linear-gradient(rgba(0, 0, 0, 0.568), transparent), url('../images/anthony.jpg');
         background-size: cover;
         background-position: center;
@@ -458,7 +455,7 @@ section#Contact {
             color: $color7;
             padding: 2rem 1rem;
             span {
-                font-size: 3rem;
+                font-size: 130%;
                 color: $color3;
                 padding: 1.5rem 1rem;
             }
@@ -476,10 +473,9 @@ section#Contact {
             input,
             button,
             label {
-                font-size: 2rem;
-                padding: 1.5rem 1rem;
+                font-size: 380%;
                 margin: 1rem 1rem;
-                width: 30rem;
+                width: 65%;
             }
             input {
                 color: #000;
@@ -488,9 +484,11 @@ section#Contact {
                 border: 3px solid $color5;
             }
             button {
+                padding: 0.1rem 0.2rem;
                 color: $color6;
                 font-family: 'vazir';
                 border: 3px solid $color5;
+                font-size: 300%;
             }
             label {
                 color: $color7;
@@ -533,8 +531,9 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     h4 {
-        font-size: 2rem;
+        font-size: 300%;
         flex: 3 1 40rem;
+        padding: 1rem;
     }
 
     ul {

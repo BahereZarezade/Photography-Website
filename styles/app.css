@@ -29,6 +29,7 @@ html,
 body {
   font-family: 'Vazir', sans-serif;
   font-size: 62.5%;
+  line-height: 45px;
   direction: rtl;
   text-align: right;
   /* حذف اسکرول افقی */
@@ -41,7 +42,7 @@ body a {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   color: #d4d4d4;
-  font-size: 1.6rem;
+  font-size: 266%;
   text-shadow: 2px 2px 2px #000;
   z-index: 3;
   font-weight: bold;
@@ -78,7 +79,6 @@ body li,
 body label,
 body input,
 body p {
-  font-size: 1rem;
   z-index: 3;
   text-shadow: 2px 1px 2px black;
   font-weight: normal;
@@ -86,14 +86,11 @@ body p {
 
 html button,
 body button {
-  font-size: 1rem;
   font-weight: bold;
   z-index: 3;
-  padding: 1rem;
   border: none;
   background: #00f5f5;
   color: #fff;
-  padding: 1rem 1rem;
   flex: 1 1 auto;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -180,17 +177,8 @@ header.main-head nav .container #logo .a {
 
 header.main-head nav .container #logo .a h1 {
   color: #00f5f5;
-  font-size: 1.5rem;
+  font-size: 265%;
   padding: 0.5rem 1rem;
-}
-
-header.main-head nav .container #logo .a h3 {
-  color: #00f5f5;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  letter-spacing: 2px;
-  font-family: 'GreatVibes-Regular';
-  letter-spacing: 5px;
 }
 
 header.main-head nav .container .nav-link {
@@ -229,18 +217,20 @@ section#Home .container .H {
 }
 
 section#Home .container .H h2 {
-  font-size: 3rem;
+  font-size: 360%;
   color: #00f5f5;
-  padding: 10rem 2rem 10rem 2rem;
+  padding: 15rem 2rem 10rem 2rem;
+  margin: 2rem 0rem;
 }
 
 section#Home .container .H p {
-  font-size: 2rem;
+  font-size: 370%;
+  margin: 0.5rem 0.5rem;
   color: #d4d4d4;
   cursor: pointer;
-  padding: 5rem 4rem;
-  line-height: 32px;
-  text-align: justify;
+  padding: 2rem 2rem;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 
 section#Home .container .H p:hover {
@@ -271,13 +261,13 @@ section#Introduction .container .intro {
 
 section#Introduction .container .intro h2 {
   color: #00f5f5;
-  font-size: 3rem;
+  font-size: 350%;
   padding-top: 2rem;
 }
 
 section#Introduction .container .intro h3 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 260%;
   border: 3px solid #00c4c4;
   padding: 0.5rem 2rem;
   margin-bottom: 4rem;
@@ -290,10 +280,10 @@ section#Introduction .container .intro h3:hover {
 }
 
 section#Introduction .container .intro p {
-  color: #fff;
-  padding: 5rem 4rem;
-  line-height: 32px;
-  font-size: 2rem;
+  color: #000;
+  text-shadow: none;
+  padding: 5rem 7rem;
+  font-size: 340%;
   text-align: justify;
 }
 
@@ -302,8 +292,8 @@ section#Introduction .container .picture {
 }
 
 section#Introduction .container .picture .hero {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 0.9;
 }
@@ -322,7 +312,7 @@ section#About .about-image {
 }
 
 section#About .about-image h5 {
-  font-size: 2.75rem;
+  font-size: 350%;
   position: absolute;
   bottom: 80%;
   left: 50%;
@@ -347,7 +337,7 @@ section#About .about-text {
 }
 
 section#About .about-text h2 {
-  font-size: 2.75rem;
+  font-size: 350%;
   color: #00f5f5;
   text-align: center;
   padding: 3rem 3rem;
@@ -358,13 +348,13 @@ section#About .about-text .about-life {
 }
 
 section#About .about-text .about-life h3 {
-  font-size: 2rem;
+  font-size: 300%;
   color: #00f5f5;
   padding: 1rem 3rem;
 }
 
 section#About .about-text .about-life p {
-  font-size: 1.5rem;
+  font-size: 300%;
   color: #d4d4d4;
   padding: 1rem 3rem;
   transition: all 0.5s ease-in-out;
@@ -380,13 +370,13 @@ section#About .about-text .about-work {
 }
 
 section#About .about-text .about-work h3 {
-  font-size: 2rem;
+  font-size: 300%;
   color: #00f5f5;
   padding: 1rem 3rem;
 }
 
 section#About .about-text .about-work p {
-  font-size: 1.5rem;
+  font-size: 300%;
   color: #d4d4d4;
   padding: 1rem 3rem;
   transition: all 0.5s ease-in-out;
@@ -402,13 +392,13 @@ section#About .about-text .about-contact {
 }
 
 section#About .about-text .about-contact h3 {
-  font-size: 2rem;
+  font-size: 300%;
   color: #00f5f5;
   padding: 1rem 3rem;
 }
 
 section#About .about-text .about-contact p {
-  font-size: 1.5rem;
+  font-size: 300%;
   color: #d4d4d4;
   padding: 1rem 3rem;
   cursor: pointer;
@@ -465,16 +455,22 @@ section#Gallery .gallery-head {
   background: rgba(0, 41, 41, 0.603);
   padding: 10rem 13rem;
   box-shadow: -1px 0px 10px 7px #000;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 section#Gallery .gallery-head h2 {
   color: #d4d4d4;
-  font-size: 3rem;
+  font-size: 450%;
 }
 
 section#Gallery .gallery-head p {
   color: #d4d4d4;
-  font-size: 2rem;
+  font-size: 312%;
+}
+
+section#Gallery .gallery-head:hover {
+  background: #002929;
 }
 
 section#Contact {
@@ -488,6 +484,7 @@ section#Contact {
 
 section#Contact .form-wrapper {
   width: 50%;
+  height: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.568), transparent), url("../images/anthony.jpg");
   background-size: cover;
   background-position: center;
@@ -508,7 +505,7 @@ section#Contact .form-wrapper h2 {
 }
 
 section#Contact .form-wrapper h2 span {
-  font-size: 3rem;
+  font-size: 130%;
   color: #00f5f5;
   padding: 1.5rem 1rem;
 }
@@ -529,10 +526,9 @@ section#Contact .form-wrapper form:hover {
 section#Contact .form-wrapper form input,
 section#Contact .form-wrapper form button,
 section#Contact .form-wrapper form label {
-  font-size: 2rem;
-  padding: 1.5rem 1rem;
+  font-size: 380%;
   margin: 1rem 1rem;
-  width: 30rem;
+  width: 65%;
 }
 
 section#Contact .form-wrapper form input {
@@ -543,9 +539,11 @@ section#Contact .form-wrapper form input {
 }
 
 section#Contact .form-wrapper form button {
+  padding: 0.1rem 0.2rem;
   color: #002929;
   font-family: 'vazir';
   border: 3px solid darkcyan;
+  font-size: 300%;
 }
 
 section#Contact .form-wrapper form label {
@@ -593,8 +591,9 @@ footer {
 }
 
 footer h4 {
-  font-size: 2rem;
+  font-size: 300%;
   flex: 3 1 40rem;
+  padding: 1rem;
 }
 
 footer ul {

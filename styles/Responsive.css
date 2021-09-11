@@ -1,15 +1,17 @@
 @media screen and (max-width: 842px) {
-  .burger {
+  header.main-head nav .burger {
     position: relative;
+    display: block;
+    cursor: pointer;
   }
-  .burger span {
+  header.main-head nav .burger span {
     padding: 0.2rem 2rem;
     background: #00f5f5;
     margin: 0.5rem 0rem;
     display: block;
     transition: all 0.5s ease-in-out;
   }
-  .nav-link {
+  header.main-head nav .nav-link {
     background: #002929;
     width: 100%;
     height: 100%;
@@ -21,38 +23,30 @@
     justify-content: space-evenly !important;
     transition: transform 1s ease-in-out;
   }
-  .nav-link a {
+  header.main-head nav .nav-link a {
     color: #fff;
     font-size: 2rem;
     text-decoration: underline;
   }
-  #logo {
+  header.main-head nav #logo {
     align-items: center !important;
   }
-  .menu-check {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
+  header.main-head nav .nav-open {
+    transform: translateX(-100%);
   }
-  .menu-check:checked + .nav-link {
-    transform: translate(-100%);
-  }
-  .menu-check:checked ~ .burger span {
-    background: #00f5f5;
-  }
-  .menu-check:checked ~ .burger span:nth-child(1) {
+  header.main-head nav .toggle .line1 {
     transform: rotateZ(45deg) translateY(300%);
+    background: white;
   }
-  .menu-check:checked ~ .burger span:nth-child(2) {
+  header.main-head nav .toggle .line2 {
     opacity: 0;
   }
-  .menu-check:checked ~ .burger span:nth-child(3) {
+  header.main-head nav .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+  section#Home {
+    height: auto;
   }
   section#Gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -84,18 +78,27 @@
     align-items: center;
     width: 100%;
   }
+  section#Contact .form-wrapper form input,
+  section#Contact .form-wrapper form button,
+  section#Contact .form-wrapper form label {
+    width: 90%;
+  }
   section#Contact .image {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1;
     width: 100%;
   }
   section#Contact .image img {
     width: 100%;
-    height: 50rem;
+    height: auto;
     flex: 1 1 40rem;
   }
   footer h4 {
     text-align: center;
+    order: 2;
+  }
+  footer ul {
+    order: 1;
   }
 }
 /*# sourceMappingURL=Responsive.css.map */
