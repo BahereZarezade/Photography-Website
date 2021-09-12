@@ -27,7 +27,6 @@
 
 html,
 body {
-  scroll-behavior: smooth;
   font-family: 'Vazir', sans-serif;
   font-size: 62.5%;
   line-height: 45px;
@@ -35,62 +34,54 @@ body {
   text-align: right;
   /* حذف اسکرول افقی */
   overflow-x: hidden;
-  /* Utility Classes */
+  scroll-behavior: smooth;
 }
 
-html a,
-body a {
+/* Utility Classes */
+a {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  color: #d4d4d4;
+  color: #12ecec;
   font-size: 266%;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 1px 2px #000;
   z-index: 3;
   font-weight: bold;
 }
 
-html .container,
-body .container {
+a:hover {
+  color: #12ecec;
+}
+
+.container {
   width: 90vw;
   margin: auto;
 }
 
-html h1,
-html h2,
-html h3,
-html h4,
-html h5,
-html h6,
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   z-index: 10;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 1px 2px #000;
   padding: 1rem 1rem;
 }
 
-html li,
-html label,
-html input,
-html p,
-body li,
-body label,
-body input,
-body p {
+li,
+label,
+input,
+p {
   z-index: 3;
-  text-shadow: 2px 1px 2px black;
+  text-shadow: 2px 1px 2px #000;
   font-weight: normal;
 }
 
-html button,
-body button {
+button {
   font-weight: bold;
   z-index: 3;
   border: none;
-  background: #00f5f5;
+  background: #12ecec;
   color: #fff;
   flex: 1 1 auto;
   cursor: pointer;
@@ -99,43 +90,30 @@ body button {
   animation-iteration-count: 3;
 }
 
-html button:hover,
-body button:hover {
+button:hover {
   background: #00c4c4;
 }
 
-html button:focus,
-body button:focus {
+button:focus {
   background: darkcyan;
   outline-style: solid;
-  outline-color: #002929;
+  outline-color: black;
 }
 
-html ul,
-body ul {
+ul {
   list-style: none;
 }
 
-html li,
-body li {
+li {
   list-style: none;
   z-index: 3;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 1px 2px #000;
   padding: 0.5rem 1rem;
 }
 
-html span,
-body span {
-  color: #00f5f5;
+span {
+  color: #12ecec;
   padding: 1rem 0.5rem;
-}
-
-html .flex,
-body .flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 header.main-head {
@@ -146,7 +124,7 @@ header.main-head {
 
 header.main-head nav {
   width: 100vw;
-  background: rgba(0, 41, 41, 0.603);
+  background: rgba(0, 0, 0, 0.486);
   display: flex;
   align-items: center;
   min-height: 10vh;
@@ -177,7 +155,7 @@ header.main-head nav .container #logo .a {
 }
 
 header.main-head nav .container #logo .a h1 {
-  color: #00f5f5;
+  color: #12ecec;
   font-size: 265%;
   padding: 0.5rem 1rem;
 }
@@ -188,8 +166,8 @@ header.main-head nav .container .nav-link {
   flex: 1 1 20rem;
 }
 
-header.main-head nav .container .nav-link li a:hover {
-  color: #00f5f5;
+header.main-head nav .container .nav-link li a {
+  color: #fff;
 }
 
 header.main-head nav input {
@@ -219,7 +197,7 @@ section#Home .container .H {
 
 section#Home .container .H h2 {
   font-size: 360%;
-  color: #00f5f5;
+  color: #12ecec;
   padding: 15rem 2rem 10rem 2rem;
   margin: 2rem 0rem;
 }
@@ -227,7 +205,7 @@ section#Home .container .H h2 {
 section#Home .container .H p {
   font-size: 370%;
   margin: 0.5rem 0.5rem;
-  color: #d4d4d4;
+  color: #fff;
   cursor: pointer;
   padding: 2rem 2rem;
   text-align: center;
@@ -235,7 +213,7 @@ section#Home .container .H p {
 }
 
 section#Home .container .H p:hover {
-  color: #00f5f5;
+  color: #12ecec;
 }
 
 section#Introduction {
@@ -261,7 +239,7 @@ section#Introduction .container .intro {
 }
 
 section#Introduction .container .intro h2 {
-  color: #00f5f5;
+  color: #12ecec;
   font-size: 350%;
   padding-top: 2rem;
 }
@@ -276,12 +254,12 @@ section#Introduction .container .intro h3 {
 }
 
 section#Introduction .container .intro h3:hover {
-  background: #00f5f5;
+  background: #12ecec;
   cursor: pointer;
 }
 
 section#Introduction .container .intro p {
-  color: #000;
+  color: black;
   text-shadow: none;
   padding: 5rem 7rem;
   font-size: 340%;
@@ -303,7 +281,7 @@ section#About {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  background: #002929;
+  background: black;
 }
 
 section#About .about-image {
@@ -317,7 +295,7 @@ section#About .about-image h5 {
   position: absolute;
   bottom: 80%;
   left: 50%;
-  color: #00f5f5;
+  color: #12ecec;
   transform: translate(-50%, -20%);
 }
 
@@ -329,17 +307,20 @@ section#About .about-image img {
 }
 
 section#About .about-text {
-  flex: 2 1 40rem;
+  display: flex;
   flex-direction: column;
-  direction: rtl;
   justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex: 2 1 40rem;
+  direction: rtl;
   text-align: justify;
   padding: 3rem 1rem;
 }
 
 section#About .about-text h2 {
   font-size: 350%;
-  color: #00f5f5;
+  color: #12ecec;
   text-align: center;
   padding: 3rem 3rem;
 }
@@ -350,7 +331,7 @@ section#About .about-text .about-life {
 
 section#About .about-text .about-life h3 {
   font-size: 300%;
-  color: #00f5f5;
+  color: #12ecec;
   padding: 1rem 3rem;
 }
 
@@ -363,7 +344,7 @@ section#About .about-text .about-life p {
 }
 
 section#About .about-text .about-life p:hover {
-  color: #00f5f5;
+  color: #12ecec;
 }
 
 section#About .about-text .about-work {
@@ -372,7 +353,7 @@ section#About .about-text .about-work {
 
 section#About .about-text .about-work h3 {
   font-size: 300%;
-  color: #00f5f5;
+  color: #12ecec;
   padding: 1rem 3rem;
 }
 
@@ -385,7 +366,7 @@ section#About .about-text .about-work p {
 }
 
 section#About .about-text .about-work p:hover {
-  color: #00f5f5;
+  color: #12ecec;
 }
 
 section#About .about-text .about-contact {
@@ -394,7 +375,7 @@ section#About .about-text .about-contact {
 
 section#About .about-text .about-contact h3 {
   font-size: 300%;
-  color: #00f5f5;
+  color: #12ecec;
   padding: 1rem 3rem;
 }
 
@@ -407,7 +388,7 @@ section#About .about-text .about-contact p {
 }
 
 section#About .about-text .about-contact p:hover {
-  color: #00f5f5;
+  color: #12ecec;
 }
 
 section#Gallery {
@@ -453,7 +434,7 @@ section#Gallery .gallery-head {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: rgba(0, 41, 41, 0.603);
+  background: rgba(0, 0, 0, 0.486);
   padding: 10rem 13rem;
   box-shadow: -1px 0px 10px 7px #000;
   cursor: pointer;
@@ -461,7 +442,7 @@ section#Gallery .gallery-head {
 }
 
 section#Gallery .gallery-head h2 {
-  color: #d4d4d4;
+  color: #fff;
   font-size: 450%;
 }
 
@@ -471,7 +452,7 @@ section#Gallery .gallery-head p {
 }
 
 section#Gallery .gallery-head:hover {
-  background: #002929;
+  background: rgba(0, 0, 0, 0.726);
 }
 
 section#Contact {
@@ -486,28 +467,21 @@ section#Contact {
 section#Contact .form-wrapper {
   width: 50%;
   height: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.568), transparent), url("../images/anthony.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: inherit;
   background-repeat: no-repeat;
   padding: 5rem 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
   flex-wrap: wrap;
   flex: 3 1 40rem;
 }
 
-section#Contact .form-wrapper h2 {
-  font-size: 2rem;
-  color: #d4d4d4;
-  padding: 2rem 1rem;
-}
-
 section#Contact .form-wrapper h2 span {
-  font-size: 130%;
-  color: #00f5f5;
+  font-size: 248%;
+  color: #12ecec;
   padding: 1.5rem 1rem;
 }
 
@@ -541,16 +515,22 @@ section#Contact .form-wrapper form input {
 
 section#Contact .form-wrapper form button {
   padding: 0.1rem 0.2rem;
-  color: #002929;
+  color: black;
   font-family: 'vazir';
   border: 3px solid darkcyan;
-  font-size: 300%;
+  font-size: 265%;
 }
 
 section#Contact .form-wrapper form label {
+  font-size: 280%;
   color: #d4d4d4;
   display: block;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+section#Contact .form-wrapper form label:hover {
+  color: #12ecec;
 }
 
 section#Contact .image {
@@ -586,8 +566,11 @@ footer {
   background: black;
   color: #d4d4d4;
   display: flex;
-  padding: 3rem 5%;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
+  text-align: unset;
+  padding: 3rem 5%;
   flex-wrap: wrap;
 }
 
@@ -598,13 +581,16 @@ footer h4 {
 }
 
 footer ul {
-  display: flex;
   flex: 1 1 40rem;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 footer ul li a img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 15%;
+  height: 50%;
 }
 /*# sourceMappingURL=app.css.map */
